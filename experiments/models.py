@@ -19,6 +19,7 @@ class AE_MNIST(nn.Module):
             nn.ELU(),
             ut.View(-1, 256),
             nn.Linear(in_features=256, out_features=dim), 
+            #ut.Normalize(),
         )
         
         self.decode = nn.Sequential(
